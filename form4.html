@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABES Student Registration</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and modern styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-red': '#B91C1C', // Deep Red
+                        'secondary-gray': '#F3F4F6', // Light Gray background
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-secondary-gray min-h-screen p-4 flex items-center justify-center font-sans">
+
+    <!-- Form Container Card -->
+    <div class="w-full max-w-4xl bg-white shadow-2xl rounded-xl p-6 sm:p-10 border border-gray-100">
+
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-primary-red mb-2 tracking-tight">ABES ENROLLMENT FORM</h1>
+            <h2 class="text-lg font-medium text-gray-600">Please fill all required sections correctly and completely.</h2>
+            <div class="w-24 h-1 bg-primary-red mx-auto mt-4 rounded-full"></div>
+        </header>
+
+        <!-- Form Fieldset -->
+        <form action="#" class="space-y-6">
+            <fieldset class="border border-gray-200 rounded-lg p-4 sm:p-6 space-y-6">
+                <legend class="text-lg font-semibold px-3 text-gray-800">Personal & Contact Details</legend>
+                
+                <!-- Two-Column Layout for Desktop -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Name Input -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+                    
+                    <!-- Mobile Input -->
+                    <div>
+                        <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+                        <input type="tel" id="mobile" placeholder="+91 99XXXXXX99" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+                    
+                    <!-- Email Input -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                        <input type="email" id="email" placeholder="abc@example.com" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+
+                    <!-- Password Input -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" id="password" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+                    
+                    <!-- Age Input -->
+                    <div>
+                        <label for="age" class="block text-sm font-medium text-gray-700 mb-1">Age</label>
+                        <input type="number" id="age" min="16" max="100" placeholder="e.g. 20" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+
+                    <!-- DOB Input -->
+                    <div>
+                        <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+                        <input type="date" id="dob" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                    </div>
+                </div>
+
+                <!-- Gender Radio Buttons -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+                    <span class="text-sm font-medium text-gray-700">Gender:</span>
+                    <div class="flex space-x-6">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="male" checked
+                                class="form-radio h-4 w-4 text-primary-red border-gray-300 focus:ring-primary-red">
+                            <span class="ml-2 text-gray-700">Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="gender" value="female"
+                                class="form-radio h-4 w-4 text-primary-red border-gray-300 focus:ring-primary-red">
+                            <span class="ml-2 text-gray-700">Female</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Height Range Input -->
+                <div>
+                    <label for="height" class="block text-sm font-medium text-gray-700 mb-1">Height (Relative to others)</label>
+                    <input type="range" id="height" min="0" max="100" value="50"
+                           class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg accent-primary-red">
+                </div>
+
+            </fieldset>
+
+            <fieldset class="border border-gray-200 rounded-lg p-4 sm:p-6 space-y-6">
+                <legend class="text-lg font-semibold px-3 text-gray-800">Academic Information</legend>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Branch Datalist/Input -->
+                    <div>
+                        <label for="branch" class="block text-sm font-medium text-gray-700 mb-1">Preferred Branch</label>
+                        <input list="Branch" id="branch" placeholder="Select or type your branch" required
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150">
+                        <datalist id="Branch">
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="CSE DS">CSE - Data Science</option>
+                            <option value="CSE AIML">CSE - AI & Machine Learning</option>
+                            <option value="IT">Information Technology</option>
+                            <option value="ECE">Electronics and Communication Engineering</option>
+                        </datalist>
+                    </div>
+
+                    <!-- City Select Dropdown -->
+                    <div>
+                        <label for="city" class="block text-sm font-medium text-gray-700 mb-1">Current City</label>
+                        <select id="city" required
+                                class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-primary-red focus:border-primary-red transition duration-150">
+                            <option value="" disabled selected>Select your city</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Bangaluru">Bangaluru</option>
+                            <option value="Ghaziabad">Ghaziabad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Subject Checkboxes -->
+                <div>
+                    <span class="text-sm font-medium text-gray-700 block mb-2">Subjects of Interest (Select all that apply):</span>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="subject" value="maths" checked
+                                class="form-checkbox h-4 w-4 text-primary-red rounded border-gray-300 focus:ring-primary-red">
+                            <span class="ml-2 text-gray-700">Mathematics</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="subject" value="physics"
+                                class="form-checkbox h-4 w-4 text-primary-red rounded border-gray-300 focus:ring-primary-red">
+                            <span class="ml-2 text-gray-700">Physics</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="subject" value="chemistry"
+                                class="form-checkbox h-4 w-4 text-primary-red rounded border-gray-300 focus:ring-primary-red">
+                            <span class="ml-2 text-gray-700">Chemistry</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Address Textarea -->
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Full Residential Address</label>
+                    <textarea id="address" cols="30" rows="4" placeholder="Enter your complete address" required
+                              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-red focus:border-primary-red transition duration-150"></textarea>
+                </div>
+
+            </fieldset>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row justify-center sm:justify-end gap-4">
+                
+                <button type="button" class="px-6 py-3 border border-primary-red text-primary-red font-semibold rounded-lg shadow-md hover:bg-red-50 transition duration-300">
+                    Verify Details
+                </button>
+                
+                <input type="reset" value="Reset Form"
+                       class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg shadow-md cursor-pointer hover:bg-gray-300 transition duration-300">
+                
+                <input type="submit" value="Submit Registration"
+                       class="px-6 py-3 bg-primary-red text-white font-semibold rounded-lg shadow-xl hover:bg-red-700 transition duration-300 cursor-pointer">
+            </div>
+
+        </form>
+        
+    </div>
+</body>
+</html>
