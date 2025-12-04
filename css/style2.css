@@ -22,7 +22,6 @@ p{
     text-transform: capitalize;
     text-shadow: 5px 0px 0px grey;
     color: white;
-    display: inline-block;
 }
 img{
     border: 2px solid lightblue;

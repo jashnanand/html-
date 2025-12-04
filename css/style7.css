@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.box:nth-child(odd){
+background-color: aliceblue;
+height: 300px;
+}
+
+.box:nth-child(even){
+background-color: brown;
+height: 300px;
+}

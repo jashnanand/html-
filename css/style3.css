@@ -1,0 +1,26 @@
+.container {
+    flex-wrap: wrap;
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: purple;
+    padding: 30px;
+  border-radius: 10px;
+  gap: 30px;
+}
+
+.item{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-grow: 4;
+    height: 150px;
+    background: rgb(255, 145, 0);
+     padding: 20px,40px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
