@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Menu</title>
+
+    <style>
+        /* BLOCK element */
+        .header {
+            display: block;
+            width: 100%;
+            background-color: #333;
+            padding: 15px;
+        }
+
+        /* INLINE element */
+        .header span {
+            display: inline;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* INLINE-BLOCK for menu container */
+        nav {
+            margin-top: 10px;
+        }
+
+        /* FLOAT used for menu items */
+        .menu li {
+            display: inline-block;
+            
+            list-style-type: none;
+            margin-right: 10px;
+        }
+
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .menu a:hover {
+            background-color: #e68900;
+        }
+
+        /* CLEAR property */
+        .clear {
+            clear: both;
+        }
+
+        .content {
+            padding: 20px;
+            margin-top: 10px;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BLOCK -->
+    <div class="header">
+        <span>My Website</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- CLEAR -->
+        <div class="clear"></div>
+    </nav>
+
+
+</body>
+</html>

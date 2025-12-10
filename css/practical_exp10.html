@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive E-commerce Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* NAVBAR (BLOCK) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #2c2c2c;
+            padding: 10px 20px;
+        }
+
+        /* LOGO (INLINE) */
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* MENU */
+        .menu {
+            display: flex;
+        }
+
+        /* MENU ITEMS (INLINE-BLOCK) */
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+
+        .menu a:hover {
+            background-color: #00ffea;
+            border-radius: 4px;
+        }
+
+        /* RESPONSIVE UNITS */
+        .navbar {
+            width: 100%;
+        }
+
+        /* MOBILE MENU */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu a {
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">ShopEase</div>
+
+
+
+        <div class="menu">
+            <a href="index10.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -6,44 +6,49 @@
     <title>Document</title>
 </head>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center,baseline;
-        }
+    body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f7f7f7;
+}
 
-        main{
-            width:1200px;
-            height: 400px;
-            background-color: #CCC;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            gap: 20px;
+/* Title */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
 
+/* Grid item */
+.grid-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-        }
-        .box:nth-child(odd) {
-            background-color: #999;
-            height: 300px;
+/* Images inside grid */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
 
-        }
-        .box:nth-child(even){
-            background-color: blue;
-            height: 300px;
-        }
 
 
     </style>
 <body>
+    <h1>SAMPLE EXP</h1>
     <main>
-        <div class ="box">1</div>
+        <div class ="box"><img src="experiment6.jpg" class="center-img"/>1</div>
         <div class ="box">2</div>
         <div class ="box">3</div>
         <div class ="box">4</div>
