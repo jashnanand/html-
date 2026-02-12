@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #38bdf8;
+}
+
+.navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-link {
+    background-color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+/* HERO */
+.offers-hero {
+    background: linear-gradient(135deg, #2563eb, #22c55e);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.offers-hero h1 {
+    font-size: 42px;
+}
+
+.offers-hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* OFFERS */
+.offers {
+    padding: 60px 40px;
+}
+
+.offers-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* OFFER CARD */
+.offer-card {
+    background-color: #020617;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(34,197,94,0.4);
+}
+
+.offer-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.new-price {
+    font-size: 24px;
+    color: #22c55e;
+    margin: 8px 0 15px;
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ef4444;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.offer-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.offer-card button:hover {
+    background-color: #1e40af;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .offers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .offers-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: #020617;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
